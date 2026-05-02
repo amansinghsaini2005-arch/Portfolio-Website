@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Aman Saini | Data Analyst Portfolio</title>
+	<meta name="description"
+		content="Professional 3D Portfolio of Aman Saini - Data Analyst specializing in Power BI, SQL, Python, and AI-driven analytics">
+	<link rel="stylesheet" href="css/portfolio3d.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+
+<body>
+	<!-- Noise Overlay -->
+	<div class="noise"></div>
+
+	<!-- Gradient Orbs -->
+	<div class="orb orb-1"></div>
+	<div class="orb orb-2"></div>
+	<div class="orb orb-3"></div>
+
+	<!-- 3D Interactive Background Container -->
+	<div id="canvas-container"
+		style="position: fixed; top: 0; left: 0; width: 100vw; height: 100vh; z-index: 0; pointer-events: none;"></div>
+
+	<!-- Navbar -->
+	<nav class="navbar-3d" id="navbar">
+		<a href="#hero" class="nav-logo">AS.</a>
+		<ul class="nav-links" id="navLinks">
+			<li><a href="#hero" class="active">Home</a></li>
+			<li><a href="#about">About</a></li>
+			<li><a href="#skills">Skills</a></li>
+			<li><a href="#experience">Experience</a></li>
+			<li><a href="#projects">Projects</a></li>
+			<li><a href="#contact">Contact</a></li>
+			<li><a href="#" class="btn-resume-nav">Resume</a></li>
+		</ul>
+		<button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+			<span></span><span></span><span></span>
+		</button>
+	</nav>
+
+	<!-- ===================== HERO ===================== -->
+	<section class="section-3d hero-section" id="hero">
+		<div class="hero-content">
+			<div class="hero-text reveal">
+				<p class="greeting">// DATA ANALYST PORTFOLIO</p>
+				<h1>I'm <span class="gradient-text">Aman</span><br>Saini</h1>
+				<div class="typing-wrapper">
+					<span id="typed-text"></span><span class="typing-cursor"></span>
+				</div>
+				<p class="hero-desc">Results-driven Data Analyst bridging finance and technology. I transform complex
+					datasets into actionable insights using Power BI, SQL, Python & AI-powered tools.</p>
+				<div class="hero-buttons">
+					<a href="https://www.linkedin.com/in/aman-saini-912850372/" target="_blank"
+						class="btn-glow primary"><i class="fab fa-linkedin"></i> LinkedIn</a>
+					<a href="https://github.com/amansinghsaini2005-arch" target="_blank" class="btn-glow outline"><i
+							class="fab fa-github"></i> My Works</a>
+				</div>
+			</div>
+			<div class="hero-visual reveal">
+				<div class="hero-3d-card" id="heroCard">
+					<img src="images/dashboard.png" alt="Professional Data Dashboard">
+					<div class="card-glow"></div>
+					<div class="card-shine"></div>
+					<div class="floating-badge"><i class="fas fa-chart-line"></i> Power BI</div>
+					<div class="floating-badge"><i class="fas fa-database"></i> SQL Expert</div>
+					<div class="floating-badge"><i class="fab fa-python"></i> Python</div>
+				</div>
+			</div>
+		</div>
+		<div class="stats-row reveal">
+			<div class="stat-card">
+				<div class="stat-number" data-target="15">0</div>
+				<div class="stat-label">Business Dashboards</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-number" data-target="100">0</div>
+				<div class="stat-label">Data Accuracy (%)</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-number" data-target="40">0</div>
+				<div class="stat-label">Hours Saved/Month</div>
+			</div>
+			<div class="stat-card">
+				<div class="stat-number" data-target="10">0</div>
+				<div class="stat-label">Enterprise Projects</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== ABOUT ===================== -->
+	<section class="section-3d" id="about">
+		<div class="section-tag">About Me</div>
+		<h2 class="section-title reveal"><span class="white">Turning Data </span><span class="gradient">Into
+				Decisions</span></h2>
+		<div class="about-grid">
+			<div class="about-image-wrapper reveal-left">
+				<div class="about-image" id="aboutCard">
+					<img src="images/dashboard.png" alt="Data Analytics Visualization">
+				</div>
+				<div class="deco-ring"></div>
+				<div class="deco-dots"></div>
+			</div>
+			<div class="about-text reveal-right">
+				<p>Results-driven Data Analyst Intern and final-year BBA (FIA) student at Delhi University bridging the
+					gap between finance and technology. I utilize Power BI, SQL, Python, and AI tools like Copilot and
+					PandasAI to automate workflows and transform complex data into actionable insights. I have
+					successfully built predictive models and reduced reporting cycles by 40%.</p>
+				<div class="info-grid">
+					<div class="info-item">
+						<div class="label">Profile</div>
+						<div class="value">Data Analytics</div>
+					</div>
+					<div class="info-item">
+						<div class="label">Domain</div>
+						<div class="value">Finance, Ecommerce & Digital Marketing</div>
+					</div>
+					<div class="info-item">
+						<div class="label">Education</div>
+						<div class="value">BBA (FIA) — Delhi University</div>
+					</div>
+					<div class="info-item">
+						<div class="label">BI Tools</div>
+						<div class="value">Power BI, Copilot & PandasAI</div>
+					</div>
+					<div class="info-item">
+						<div class="label">Languages</div>
+						<div class="value">English, Hindi</div>
+					</div>
+					<div class="info-item">
+						<div class="label">Other Skills</div>
+						<div class="value">Cloud, Excel, Google Analytics</div>
+					</div>
+				</div>
+				<a href="#" class="btn-glow primary"><i class="fas fa-download"></i> Download CV</a>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== SKILLS ===================== -->
+	<section class="section-3d" id="skills">
+		<div class="section-tag">Expertise</div>
+		<h2 class="section-title reveal"><span class="white">Skills & </span><span class="gradient">Technologies</span>
+		</h2>
+		<p class="section-subtitle reveal">Core technical skills I leverage to deliver data-driven solutions.</p>
+		<div class="skills-grid">
+			<div class="skill-card-3d reveal">
+				<span class="skill-icon">📊</span>
+				<h3>Power BI & DAX</h3>
+				<p>Interactive dashboards, custom DAX measures, real-time reporting & visual storytelling</p>
+				<div class="skill-bar">
+					<div class="skill-bar-fill" data-width="90"></div>
+				</div>
+				<div class="skill-percent">90%</div>
+			</div>
+			<div class="skill-card-3d reveal">
+				<span class="skill-icon">🗄️</span>
+				<h3>SQL (CTEs & Joins)</h3>
+				<p>Complex queries, KPI automation, data optimization & warehouse management</p>
+				<div class="skill-bar">
+					<div class="skill-bar-fill" data-width="85"></div>
+				</div>
+				<div class="skill-percent">85%</div>
+			</div>
+			<div class="skill-card-3d reveal">
+				<span class="skill-icon">🐍</span>
+				<h3>Python (EDA & ML)</h3>
+				<p>Predictive modeling, exploratory analysis, Pandas, Scikit-learn & automation</p>
+				<div class="skill-bar">
+					<div class="skill-bar-fill" data-width="90"></div>
+				</div>
+				<div class="skill-percent">90%</div>
+			</div>
+			<div class="skill-card-3d reveal">
+				<span class="skill-icon">🤖</span>
+				<h3>AI & Automation</h3>
+				<p>Copilot, PandasAI, AI-assisted storytelling & workflow automation</p>
+				<div class="skill-bar">
+					<div class="skill-bar-fill" data-width="80"></div>
+				</div>
+				<div class="skill-percent">80%</div>
+			</div>
+			<div class="skill-card-3d reveal">
+				<span class="skill-icon">📈</span>
+				<h3>Excel & Analytics</h3>
+				<p>Financial modeling, advanced formulas, pivot analysis & Google Analytics</p>
+				<div class="skill-bar">
+					<div class="skill-bar-fill" data-width="80"></div>
+				</div>
+				<div class="skill-percent">80%</div>
+			</div>
+			<div class="skill-card-3d reveal">
+				<span class="skill-icon">💹</span>
+				<h3>Financial Analysis</h3>
+				<p>Stock market analysis, investment strategy, risk assessment & valuation</p>
+				<div class="skill-bar">
+					<div class="skill-bar-fill" data-width="75"></div>
+				</div>
+				<div class="skill-percent">75%</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== EXPERIENCE ===================== -->
+	<section class="section-3d" id="experience">
+		<div class="section-tag">Career Path</div>
+		<h2 class="section-title reveal"><span class="white">Experience & </span><span class="gradient">Education</span>
+		</h2>
+		<div class="exp-edu-grid">
+			<div class="reveal-left">
+				<h3 class="column-title exp"><i class="fas fa-briefcase"></i> Experience</h3>
+				<div class="timeline">
+					<div class="timeline-item">
+						<div class="timeline-date">Feb 2026 — Present</div>
+						<h3>Data Analyst Intern & Team Lead</h3>
+						<div class="company">Analytics Career Connect (ACC)</div>
+						<ul>
+							<li>Leading interns to deliver high-impact data solutions with 100% data consistency across
+								Insurance and Retail domains.</li>
+							<li>Developed interactive Power BI dashboards with custom DAX measures, reducing reporting
+								cycle by 40%.</li>
+							<li>Optimized complex SQL queries using Joins and CTEs, reducing manual retrieval time by
+								50%.</li>
+						</ul>
+					</div>
+					<div class="timeline-item">
+						<div class="timeline-date">Feb 2026 — Present</div>
+						<h3>Founder's Office Intern</h3>
+						<div class="company">Analytics Career Connect (ACC)</div>
+						<ul>
+							<li>Automating business workflows and job search data collection using Python and APIs.</li>
+							<li>End-to-end market analysis of the Indian EdTech market for growth opportunities.</li>
+							<li>Built predictive models (Logistic Regression) achieving an 88% AUC score.</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="reveal-right">
+				<h3 class="column-title edu"><i class="fas fa-graduation-cap"></i> Education</h3>
+				<div class="edu-card">
+					<div class="edu-year">2023 — 2026</div>
+					<h3>Bachelor of Business Administration</h3>
+					<div class="edu-school">Delhi University</div>
+					<p><strong>Specialization:</strong> Financial Investment Analysis (FIA)<br><strong>Status:</strong>
+						Final Year (Semester VI)</p>
+				</div>
+				<div class="edu-card">
+					<div class="edu-year">2021 — 2023</div>
+					<h3>Senior Secondary (Class 12th)</h3>
+					<div class="edu-school">A.T.S.B.V. School</div>
+					<p><strong>Board:</strong> CBSE</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ===================== PROJECTS ===================== -->
+	<section class="section-3d" id="projects">
+		<div class="section-tag">Portfolio</div>
+		<h2 class="section-title reveal"><span class="white">Featured </span><span class="gradient">Projects</span></h2>
+		<p class="section-subtitle reveal">Real-world data analytics projects showcasing SQL, Python, Power BI & ML
+			expertise.</p>
+		<div class="projects-grid">
+			<div class="project-card reveal">
+				<div class="project-image"><img src="images/proj_1.PNG" alt="SQL Analysis">
+					<div class="project-overlay"></div>
+				</div>
+				<div class="project-content">
+					<div class="project-tags"><span>SQL</span><span>Analytics</span></div>
+					<h3>Digital Music Store Data Analysis</h3>
+					<div class="project-details">
+						<p><strong>Problem:</strong> Identify growth gaps and optimize revenue streams.</p>
+						<p><strong>Tools:</strong> Postgre SQL, Advanced Queries.</p>
+						<p><strong>Insight:</strong> Top 5% of users generate 30% of total revenue.</p>
+						<p><strong>Impact:</strong> Recommended targeted retention, estimating 10% sales boost.</p>
+					</div>
+					<a href="https://github.com/amansinghsaini2005-arch/Weather-Report-Dashboard" target="_blank"
+						class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="project-card reveal">
+				<div class="project-image"><img src="images/proj_2.PNG" alt="Python EDA">
+					<div class="project-overlay"></div>
+				</div>
+				<div class="project-content">
+					<div class="project-tags"><span>Python</span><span>EDA</span></div>
+					<h3>Exploratory Data Analysis with Python</h3>
+					<div class="project-details">
+						<p><strong>Problem:</strong> Lack of visibility into customer purchasing patterns.</p>
+						<p><strong>Tools:</strong> Python, Pandas, Matplotlib, Seaborn.</p>
+						<p><strong>Insight:</strong> Weekend sales underperformed expectations by 25%.</p>
+						<p><strong>Impact:</strong> Provided data foundation for weekend promotional campaigns.</p>
+					</div>
+					<a href="https://github.com/amansinghsaini2005-arch/Loan-Report" target="_blank"
+						class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="project-card reveal">
+				<div class="project-image"><img src="images/proj_3.PNG" alt="Power BI">
+					<div class="project-overlay"></div>
+				</div>
+				<div class="project-content">
+					<div class="project-tags"><span>Power BI</span><span>DAX</span></div>
+					<h3>Insurance Risk & Claims Analysis</h3>
+					<div class="project-details">
+						<p><strong>Problem:</strong> Fragmented reporting across multiple insurance domains.</p>
+						<p><strong>Tools:</strong> Power BI, DAX, Excel.</p>
+						<p><strong>Insight:</strong> 15% of claims were delayed due to specific process bottlenecks.</p>
+						<p><strong>Impact:</strong> Automated dashboards reduced reporting cycle by 40%.</p>
+					</div>
+					<a href="https://github.com/amansinghsaini2005-arch/Insurance-Risk-claims-analysis" target="_blank"
+						class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="project-card reveal">
+				<div class="project-image"><img src="images/proj_4.PNG" alt="ML Forecast">
+					<div class="project-overlay"></div>
+				</div>
+				<div class="project-content">
+					<div class="project-tags"><span>ML</span><span>Time Series</span></div>
+					<h3>Sales Forecast — Time Series Analysis</h3>
+					<div class="project-details">
+						<p><strong>Problem:</strong> Unpredictable retail sales causing inventory inefficiencies.</p>
+						<p><strong>Tools:</strong> Python, Scikit-learn, ARIMA.</p>
+						<p><strong>Insight:</strong> Identified strong historical seasonal trends in Q4.</p>
+						<p><strong>Impact:</strong> Enhanced inventory planning accuracy by 18%.</p>
+					</div>
+					<a href="https://github.com/amansinghsaini2005-arch/Ai-job-sql-" target="_blank"
+						class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+				</div>
+			</div>
+			<div class="project-card reveal">
+				<div class="project-image"><img src="images/proj_5.PNG" alt="Clustering">
+					<div class="project-overlay"></div>
+				</div>
+				<div class="project-content">
+					<div class="project-tags"><span>ML</span><span>Clustering</span></div>
+					<h3>Customer Segmentation Model</h3>
+					<div class="project-details">
+						<p><strong>Problem:</strong> Generic product marketing lowering conversion rates.</p>
+						<p><strong>Tools:</strong> Python, K-Means Clustering, PCA.</p>
+						<p><strong>Insight:</strong> Revealed 3 distinct customer persona clusters.</p>
+						<p><strong>Impact:</strong> Designed strategy to increase recommendation CTR by 22%.</p>
+					</div>
+					<a href="https://github.com/amansinghsaini2005-arch/cricket-analysis-dashboard-" target="_blank"
+						class="project-link">View Project <i class="fas fa-arrow-right"></i></a>
+				</div>
+			</div>
+		</div>
+		<div style="text-align:center;margin-top:3rem" class="reveal">
+			<a href="https://github.com/amansinghsaini2005-arch" target="_blank" class="btn-glow primary"><i
+					class="fab fa-github"></i> More on GitHub</a>
+		</div>
+	</section>
+
+	<!-- ===================== CONTACT ===================== -->
+	<section class="section-3d" id="contact">
+		<div class="section-tag">Get In Touch</div>
+		<h2 class="section-title reveal"><span class="white">Let's </span><span class="gradient">Connect</span></h2>
+		<p class="section-subtitle reveal">I'm always open to discussing data projects, collaborations, or
+			opportunities.</p>
+		<div class="contact-grid reveal">
+			<div class="contact-card">
+				<div class="contact-icon">📍</div>
+				<h4>Address</h4>
+				<p>Ghaziabad, Uttar Pradesh</p>
+			</div>
+			<div class="contact-card">
+				<div class="contact-icon">📞</div>
+				<h4>Phone</h4><a href="tel:+919968125765">+91 9968125765</a>
+			</div>
+			<div class="contact-card">
+				<div class="contact-icon">✉️</div>
+				<h4>Email</h4><a href="mailto:amansaini.data.acc@gmail.com">amansaini.data.acc@gmail.com</a>
+			</div>
+			<div class="contact-card">
+				<div class="contact-icon">📄</div>
+				<h4>Resume</h4><a href="#">Download CV</a>
+			</div>
+		</div>
+		<div class="social-links reveal">
+			<a href="https://www.linkedin.com/in/aman-saini-912850372/" target="_blank" class="social-link"><i
+					class="fab fa-linkedin-in"></i></a>
+			<a href="https://github.com/amansinghsaini2005-arch" target="_blank" class="social-link"><i
+					class="fab fa-github"></i></a>
+		</div>
+	</section>
+
+	<footer class="footer-3d">
+		<p>&copy; 2026 Aman Saini — Crafted with <i class="fas fa-heart" style="color:var(--accent)"></i></p>
+	</footer>
+
+	<script type="module">
+		import { animate, inView, scroll, stagger } from "https://cdn.jsdelivr.net/npm/motion@11.11.13/+esm";
+
+		// ===== 3D INTERACTIVE DATA NETWORK (Three.js) =====
+		(function () {
+			const container = document.getElementById('canvas-container');
+			const scene = new THREE.Scene();
+			// Dark deep blue fog matching the theme
+			scene.fog = new THREE.FogExp2(0x080d1a, 0.0015);
+
+			const camera = new THREE.PerspectiveCamera(65, window.innerWidth / window.innerHeight, 1, 2000);
+			camera.position.z = 500;
+
+			const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+			renderer.setSize(window.innerWidth, window.innerHeight);
+			renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+			container.appendChild(renderer.domElement);
+
+			// Particles Setup
+			const particleCount = 350;
+			const maxDistance = 120;
+			const particlesData = [];
+
+			const positions = new Float32Array(particleCount * 3);
+			const velocities = [];
+
+			const pMaterial = new THREE.PointsMaterial({
+				color: 0x60a5fa,
+				size: 3,
+				blending: THREE.AdditiveBlending,
+				transparent: true,
+				opacity: 0.8,
+				sizeAttenuation: true
+			});
+
+			for (let i = 0; i < particleCount; i++) {
+				const x = (Math.random() - 0.5) * 1200;
+				const y = (Math.random() - 0.5) * 1200;
+				const z = (Math.random() - 0.5) * 1200;
+
+				positions[i * 3] = x;
+				positions[i * 3 + 1] = y;
+				positions[i * 3 + 2] = z;
+
+				velocities.push({
+					x: (Math.random() - 0.5) * 0.8,
+					y: (Math.random() - 0.5) * 0.8,
+					z: (Math.random() - 0.5) * 0.8
+				});
+
+				particlesData.push({ numConnections: 0 });
+			}
+
+			const particlesGeometry = new THREE.BufferGeometry();
+			particlesGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+
+			const pointCloud = new THREE.Points(particlesGeometry, pMaterial);
+			scene.add(pointCloud);
+
+			// Lines Setup (Connecting nodes)
+			const linesGeometry = new THREE.BufferGeometry();
+			const linePositions = new Float32Array(particleCount * particleCount * 3);
+			const lineColors = new Float32Array(particleCount * particleCount * 3);
+
+			linesGeometry.setAttribute('position', new THREE.BufferAttribute(linePositions, 3));
+			linesGeometry.setAttribute('color', new THREE.BufferAttribute(lineColors, 3));
+
+			const linesMaterial = new THREE.LineBasicMaterial({
+				vertexColors: true,
+				blending: THREE.AdditiveBlending,
+				transparent: true,
+				opacity: 0.3
+			});
+
+			const linesMesh = new THREE.LineSegments(linesGeometry, linesMaterial);
+			scene.add(linesMesh);
+
+			// Interactivity
+			let mouseX = 0;
+			let mouseY = 0;
+			const windowHalfX = window.innerWidth / 2;
+			const windowHalfY = window.innerHeight / 2;
+
+			document.addEventListener('mousemove', (event) => {
+				mouseX = (event.clientX - windowHalfX) * 0.5;
+				mouseY = (event.clientY - windowHalfY) * 0.5;
+			});
+
+			let scrollY = 0;
+			window.addEventListener('scroll', () => {
+				scrollY = window.scrollY;
+			});
+
+			function animate() {
+				requestAnimationFrame(animate);
+
+				let vertexpos = 0;
+				let colorpos = 0;
+				let numConnected = 0;
+
+				for (let i = 0; i < particleCount; i++)
+					particlesData[i].numConnections = 0;
+
+				for (let i = 0; i < particleCount; i++) {
+					const particleData = particlesData[i];
+
+					positions[i * 3] += velocities[i].x;
+					positions[i * 3 + 1] += velocities[i].y;
+					positions[i * 3 + 2] += velocities[i].z;
+
+					// Bounding Box
+					if (Math.abs(positions[i * 3 + 1]) > 600) velocities[i].y *= -1;
+					if (Math.abs(positions[i * 3]) > 600) velocities[i].x *= -1;
+					if (Math.abs(positions[i * 3 + 2]) > 600) velocities[i].z *= -1;
+
+					for (let j = i + 1; j < particleCount; j++) {
+						const particleDataB = particlesData[j];
+
+						const dx = positions[i * 3] - positions[j * 3];
+						const dy = positions[i * 3 + 1] - positions[j * 3 + 1];
+						const dz = positions[i * 3 + 2] - positions[j * 3 + 2];
+						const dist = Math.sqrt(dx * dx + dy * dy + dz * dz);
+
+						if (dist < maxDistance) {
+							particleData.numConnections++;
+							particleDataB.numConnections++;
+
+							const alpha = 1.0 - dist / maxDistance;
+
+							linePositions[vertexpos++] = positions[i * 3];
+							linePositions[vertexpos++] = positions[i * 3 + 1];
+							linePositions[vertexpos++] = positions[i * 3 + 2];
+
+							linePositions[vertexpos++] = positions[j * 3];
+							linePositions[vertexpos++] = positions[j * 3 + 1];
+							linePositions[vertexpos++] = positions[j * 3 + 2];
+
+							// Gradient lines: deep blue to light blue
+							lineColors[colorpos++] = alpha * 0.2;
+							lineColors[colorpos++] = alpha * 0.5;
+							lineColors[colorpos++] = alpha;
+
+							lineColors[colorpos++] = alpha * 0.2;
+							lineColors[colorpos++] = alpha * 0.6;
+							lineColors[colorpos++] = alpha;
+
+							numConnected++;
+						}
+					}
+				}
+
+				linesMesh.geometry.setDrawRange(0, numConnected * 2);
+				linesMesh.geometry.attributes.position.needsUpdate = true;
+				linesMesh.geometry.attributes.color.needsUpdate = true;
+				pointCloud.geometry.attributes.position.needsUpdate = true;
+
+				// Slowly rotate entire system
+				pointCloud.rotation.y += 0.001;
+				linesMesh.rotation.y += 0.001;
+				pointCloud.rotation.x += 0.0005;
+				linesMesh.rotation.x += 0.0005;
+
+				// Camera Rig (reacts to mouse and dives on scroll)
+				camera.position.x += (mouseX - camera.position.x) * 0.02;
+				camera.position.y += (-mouseY - camera.position.y) * 0.02;
+				const targetZ = 500 - scrollY * 0.2;
+				camera.position.z += (targetZ - camera.position.z) * 0.05;
+
+				camera.lookAt(scene.position);
+
+				renderer.render(scene, camera);
+			}
+
+			animate();
+
+			window.addEventListener('resize', () => {
+				camera.aspect = window.innerWidth / window.innerHeight;
+				camera.updateProjectionMatrix();
+				renderer.setSize(window.innerWidth, window.innerHeight);
+			});
+		})();
+
+		// ===== TYPING =====
+		(function () {
+			const texts = ['Results-Driven Data Analyst', 'Power BI & SQL Specialist', 'Python Predictive Modeler', 'AI-Assisted Data Storyteller'];
+			let ti = 0, ci = 0, del = false;
+			const el = document.getElementById('typed-text');
+			function type() {
+				const t = texts[ti]; el.textContent = del ? t.substring(0, ci--) : t.substring(0, ci++);
+				let d = del ? 35 : 90;
+				if (!del && ci > t.length) { d = 2500; del = true }
+				else if (del && ci < 0) { del = false; ti = (ti + 1) % texts.length; d = 400 }
+				setTimeout(type, d);
+			}
+			type();
+		})();
+
+		// ===== NAVBAR =====
+		const navbar = document.getElementById('navbar'), navToggle = document.getElementById('navToggle'), navLinks = document.getElementById('navLinks');
+		addEventListener('scroll', () => navbar.classList.toggle('scrolled', window.scrollY > 50));
+		navToggle.addEventListener('click', () => navLinks.classList.toggle('open'));
+		document.querySelectorAll('.nav-links a').forEach(a => a.addEventListener('click', () => navLinks.classList.remove('open')));
+
+		// Active link
+		const sections = document.querySelectorAll('section[id]');
+		addEventListener('scroll', () => { const sy = window.scrollY + 200; sections.forEach(s => { const link = document.querySelector(`.nav-links a[href="#${s.id}"]`); if (link) link.classList.toggle('active', sy >= s.offsetTop && sy < s.offsetTop + s.offsetHeight) }) });
+
+		// ===== 3D CARD TILT =====
+		const heroCard = document.getElementById('heroCard');
+		if (heroCard) {
+			heroCard.addEventListener('mousemove', e => {
+				const r = heroCard.getBoundingClientRect();
+				const x = ((e.clientX - r.left) / r.width - .5) * 20, y = ((e.clientY - r.top) / r.height - .5) * -20;
+				heroCard.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
+				heroCard.style.setProperty('--mouse-x', ((e.clientX - r.left) / r.width * 100) + '%');
+				heroCard.style.setProperty('--mouse-y', ((e.clientY - r.top) / r.height * 100) + '%');
+			});
+			heroCard.addEventListener('mouseleave', () => { heroCard.style.transform = 'rotateY(0) rotateX(0)' });
+		}
+
+		// ===== FRAMER MOTION REVEALS =====
+
+		// Utility to animate multiple matching elements separately
+		document.querySelectorAll('.reveal').forEach((el) => {
+			inView(el, (info) => {
+				animate(info.target, { opacity: [0, 1], y: [40, 0] }, { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] });
+				// We don't want it to repeat endlessly, so we just run it once.
+				// Returning a function from inView would run on leave, but we leave it as is to keep it shown.
+			});
+		});
+
+		document.querySelectorAll('.reveal-left').forEach((el) => {
+			inView(el, (info) => {
+				animate(info.target, { opacity: [0, 1], x: [-40, 0] }, { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] });
+			});
+		});
+
+		document.querySelectorAll('.reveal-right').forEach((el) => {
+			inView(el, (info) => {
+				animate(info.target, { opacity: [0, 1], x: [40, 0] }, { duration: 0.8, easing: [0.25, 0.46, 0.45, 0.94] });
+			});
+		});
+
+		// Staggered Skills
+		const skillsGrid = document.querySelector('.skills-grid');
+		if (skillsGrid) {
+			inView(skillsGrid, () => {
+				animate(".skill-card-3d", { opacity: [0, 1], y: [30, 0] }, { duration: 0.6, delay: stagger(0.1) });
+				document.querySelectorAll('.skill-card-3d').forEach(card => {
+					const bar = card.querySelector('.skill-bar-fill');
+					if (bar) animate(bar, { width: [0, bar.dataset.width + '%'] }, { duration: 1.5, delay: 0.3, easing: "ease-out" });
+				});
+			});
+		}
+
+		// Staggered Projects
+		const projectsGrid = document.querySelector('.projects-grid');
+		if (projectsGrid) {
+			inView(projectsGrid, () => {
+				animate(".project-card", { opacity: [0, 1], y: [40, 0] }, { duration: 0.8, delay: stagger(0.15) });
+			});
+		}
+
+		// Stats Counters
+		const statsRow = document.querySelector('.stats-row');
+		if (statsRow) {
+			inView(statsRow, () => {
+				document.querySelectorAll('.stat-number[data-target]').forEach((stat, index) => {
+					const target = +stat.dataset.target;
+					animate(0, target, {
+						duration: 2,
+						delay: index * 0.1,
+						onUpdate: (latest) => {
+							stat.textContent = Math.floor(latest) + (target < 100 ? '+' : '%');
+						}
+					});
+				});
+			});
+		}
+	</script>
+</body>
+
+</html>
