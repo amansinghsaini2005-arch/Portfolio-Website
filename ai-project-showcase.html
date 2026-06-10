@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Student Placement Analysis - Case Study</title>
+    <link rel="stylesheet" href="ai-showcase.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Chart.js for interactive graphics -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="nav-left">
+            <a href="index.html" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </a>
+        </div>
+        <div class="nav-brand">AI <span class="accent-text">Analysis</span></div>
+        <div class="nav-right">
+            <button class="theme-toggle" id="theme-btn" aria-label="Toggle Dark/Light Mode">
+                <i class="fas fa-sun"></i>
+            </button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- Hero Section -->
+        <header class="hero fade-in">
+            <h1>Student Placement Analysis Report</h1>
+            <p>A comprehensive statistical and machine learning analysis of 100,000 engineering student records to predict placement probability and estimate salaries based on academic and skill profiles.</p>
+            <div class="tech-stack">
+                <span class="badge"><i class="fab fa-python"></i> Python</span>
+                <span class="badge"><i class="fas fa-brain"></i> Scikit-Learn</span>
+                <span class="badge"><i class="fas fa-chart-pie"></i> Pandas</span>
+                <span class="badge"><i class="fas fa-chart-line"></i> Matplotlib</span>
+                <span class="badge"><i class="fas fa-square-root-variable"></i> SciPy</span>
+            </div>
+        </header>
+
+        <!-- Executive Metrics -->
+        <section class="metrics-grid fade-in">
+            <div class="metric-card">
+                <i class="fas fa-user-graduate metric-icon"></i>
+                <div class="metric-value">68.5%</div>
+                <div class="metric-label">Overall Placement Rate</div>
+            </div>
+            <div class="metric-card">
+                <i class="fas fa-rupee-sign metric-icon"></i>
+                <div class="metric-value">17.3 L</div>
+                <div class="metric-label">Average Salary (LPA)</div>
+            </div>
+            <div class="metric-card">
+                <i class="fas fa-bullseye metric-icon"></i>
+                <div class="metric-value">69.8%</div>
+                <div class="metric-label">Classification Accuracy</div>
+            </div>
+            <div class="metric-card">
+                <i class="fas fa-chart-area metric-icon"></i>
+                <div class="metric-value">0.759</div>
+                <div class="metric-label">R² Score (Salary Model)</div>
+            </div>
+        </section>
+
+        <!-- Main Content Blocks -->
+        <section class="section-block fade-in">
+            <h2 class="section-title"><i class="fas fa-search"></i> The Objective & Baseline</h2>
+            <div class="content-grid">
+                <div class="text-content">
+                    <p>The primary goal of this project was to analyze historical data of 100,000 engineering students to uncover the hidden patterns driving successful campus placements.</p>
+                    <p>By applying data science techniques, we aimed to transition from anecdotal assumptions to data-driven truths regarding how internships, backlogs, college tiers, and specific skills affect employability.</p>
+                    
+                    <div class="highlight-box">
+                        <h4>Branch Performance Baseline</h4>
+                        <p>We first established the baseline placement rates across different engineering branches. Computer Science Engineering (CSE) led the placements with a 71.3% success rate, indicating a higher industry demand for software roles compared to core branches like Mechanical or Civil.</p>
+                    </div>
+                </div>
+                <div class="data-visual">
+                    <canvas id="branchChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block fade-in">
+            <h2 class="section-title"><i class="fas fa-lightbulb"></i> Key Insights & Variables</h2>
+            <div class="content-grid">
+                <div class="data-visual">
+                    <canvas id="tierChart"></canvas>
+                </div>
+                <div class="text-content">
+                    <ul class="feature-list">
+                        <li><strong>The Internship Effect:</strong> Internships proved to be massive accelerators. Each internship added approximately ₹1.15 LPA to the average salary and boosted placement probability by 4–5%.</li>
+                        <li><strong>The Backlog Penalty:</strong> Academic consistency matters. Every additional backlog reduced placement chances by a stark 3%.</li>
+                        <li><strong>College Tier Impact:</strong> We found a massive 23% gap in placement rates between Tier-1 (83.1%) and Tier-3 (60.1%) colleges. </li>
+                        <li><strong>The Skill Myth:</strong> Interestingly, core technical skills (like Data Structures & Algorithms) were statistically similar across all tiers. This proved that the Tier-1 advantage is heavily influenced by institutional networking and brand value rather than pure technical superiority.</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block fade-in">
+            <h2 class="section-title"><i class="fas fa-robot"></i> Predictive Machine Learning Models</h2>
+            <div class="content-grid">
+                <div class="text-content">
+                    <p>Beyond retrospective analysis, we built predictive machine learning models to provide actionable foresight for current students.</p>
+                    <ul class="feature-list">
+                        <li><strong>Placement Classification:</strong> A Logistic Regression model was trained to predict the binary outcome (Placed/Not Placed). It achieved an accuracy of 69.8%, proving reliable for baseline estimations.</li>
+                        <li><strong>Salary Estimation:</strong> A Random Forest Regressor was developed to estimate expected CTC based on a student's numerical profile, yielding a robust R² score of 0.759.</li>
+                        <li><strong>Strongest Predictors:</strong> Feature importance extraction confirmed that CGPA is the absolute highest importance feature, closely followed by General Aptitude Scores and Machine Learning knowledge.</li>
+                    </ul>
+                </div>
+                <div class="data-visual">
+                    <canvas id="featureChart"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-block fade-in" style="border-left-color: var(--accent);">
+            <h2 class="section-title"><i class="fas fa-rocket"></i> Practical Applications</h2>
+            <div class="text-content">
+                <p>The models and findings from this analysis pave the way for powerful, student-centric applications designed to maximize career success:</p>
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 20px;">
+                    <div class="highlight-box" style="margin-top: 0;">
+                        <h4>Placement Predictor App</h4>
+                        <p>A hypothetical web tool allowing students to input their current metrics (CGPA, backlogs, internships) to receive a real-time probability score, helping them gauge their interview readiness.</p>
+                    </div>
+                    <div class="highlight-box" style="margin-top: 0;">
+                        <h4>Study Plan Recommender</h4>
+                        <p>An intelligent system that identifies specific skill gaps relative to the placement model (e.g., highlighting a severe lack of ML knowledge) and suggests tailored learning roadmaps.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- View PDF Section -->
+        <div class="action-section fade-in">
+            <h3 style="margin-bottom: 15px; font-family: 'Playfair Display', serif; font-size: 1.8rem;">Review the Complete Research</h3>
+            <p style="color: var(--text-muted); margin-bottom: 25px;">Dive deeper into the mathematical formulas, complete EDA process, and detailed model architectures.</p>
+            <a href="https://docs.google.com/document/d/1Fg08oX4fQ2h1ed44lCZAP0a9b41DeN7F/edit?usp=drive_link&ouid=102316366125148447852&rtpof=true&sd=true" target="_blank" class="btn-pdf">
+                <i class="fas fa-file-pdf"></i> View Full PDF Report
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // --- Theme Toggle Logic ---
+        const themeBtn = document.getElementById('theme-btn');
+        const icon = themeBtn.querySelector('i');
+        let isLight = false;
+
+        // Chart color variables
+        let chartTextColor = '#94a3b8';
+        let chartGridColor = 'rgba(255, 255, 255, 0.1)';
+
+        function updateChartColors() {
+            if (isLight) {
+                chartTextColor = '#475569';
+                chartGridColor = 'rgba(0, 0, 0, 0.1)';
+            } else {
+                chartTextColor = '#94a3b8';
+                chartGridColor = 'rgba(255, 255, 255, 0.1)';
+            }
+
+            // Update existing charts
+            if (window.branchChartInst) {
+                window.branchChartInst.options.scales.x.ticks.color = chartTextColor;
+                window.branchChartInst.options.scales.y.ticks.color = chartTextColor;
+                window.branchChartInst.options.scales.y.grid.color = chartGridColor;
+                window.branchChartInst.update();
+            }
+            if (window.tierChartInst) {
+                window.tierChartInst.options.scales.x.ticks.color = chartTextColor;
+                window.tierChartInst.options.scales.y.ticks.color = chartTextColor;
+                window.tierChartInst.options.scales.y.grid.color = chartGridColor;
+                window.tierChartInst.update();
+            }
+            if (window.featureChartInst) {
+                window.featureChartInst.options.scales.x.ticks.color = chartTextColor;
+                window.featureChartInst.options.scales.y.ticks.color = chartTextColor;
+                window.featureChartInst.options.scales.x.grid.color = chartGridColor;
+                window.featureChartInst.update();
+            }
+        }
+
+        themeBtn.addEventListener('click', () => {
+            document.body.classList.toggle('light-theme');
+            isLight = document.body.classList.contains('light-theme');
+            
+            if (isLight) {
+                icon.classList.remove('fa-sun');
+                icon.classList.add('fa-moon');
+            } else {
+                icon.classList.remove('fa-moon');
+                icon.classList.add('fa-sun');
+            }
+            updateChartColors();
+        });
+
+        // --- Chart.js Implementations ---
+        Chart.defaults.font.family = "'Inter', sans-serif";
+        Chart.defaults.color = chartTextColor;
+
+        // 1. Branch Placement Rate
+        const ctxBranch = document.getElementById('branchChart').getContext('2d');
+        window.branchChartInst = new Chart(ctxBranch, {
+            type: 'bar',
+            data: {
+                labels: ['CSE', 'IT', 'ECE', 'EEE', 'Mech', 'Civil'],
+                datasets: [{
+                    label: 'Placement Rate (%)',
+                    data: [71.3, 69.5, 67.2, 65.1, 62.4, 58.9],
+                    backgroundColor: 'rgba(139, 92, 246, 0.6)',
+                    borderColor: 'rgba(139, 92, 246, 1)',
+                    borderWidth: 1,
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        max: 100,
+                        grid: { color: chartGridColor }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // 2. Tier Impact
+        const ctxTier = document.getElementById('tierChart').getContext('2d');
+        window.tierChartInst = new Chart(ctxTier, {
+            type: 'line',
+            data: {
+                labels: ['Tier 1', 'Tier 2', 'Tier 3'],
+                datasets: [{
+                    label: 'Placement Rate (%)',
+                    data: [83.1, 71.5, 60.1],
+                    borderColor: '#38bdf8',
+                    backgroundColor: 'rgba(56, 189, 248, 0.2)',
+                    fill: true,
+                    tension: 0.4,
+                    pointRadius: 6,
+                    pointBackgroundColor: '#38bdf8'
+                }]
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: false,
+                        min: 50,
+                        max: 90,
+                        grid: { color: chartGridColor }
+                    },
+                    x: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // 3. Feature Importance
+        const ctxFeature = document.getElementById('featureChart').getContext('2d');
+        window.featureChartInst = new Chart(ctxFeature, {
+            type: 'bar',
+            data: {
+                labels: ['CGPA', 'Aptitude', 'ML Skills', 'Internships', 'Projects', 'DSA'],
+                datasets: [{
+                    label: 'Relative Importance',
+                    data: [0.35, 0.22, 0.18, 0.12, 0.08, 0.05],
+                    backgroundColor: [
+                        'rgba(139, 92, 246, 0.8)',
+                        'rgba(56, 189, 248, 0.8)',
+                        'rgba(16, 185, 129, 0.8)',
+                        'rgba(245, 158, 11, 0.8)',
+                        'rgba(236, 72, 153, 0.8)',
+                        'rgba(100, 116, 139, 0.8)'
+                    ],
+                    borderRadius: 4
+                }]
+            },
+            options: {
+                indexAxis: 'y',
+                responsive: true,
+                maintainAspectRatio: false,
+                plugins: {
+                    legend: { display: false }
+                },
+                scales: {
+                    x: {
+                        beginAtZero: true,
+                        grid: { color: chartGridColor }
+                    },
+                    y: {
+                        grid: { display: false }
+                    }
+                }
+            }
+        });
+
+        // --- Fade In Animation ---
+        const faders = document.querySelectorAll('.fade-in');
+        const appearOptions = { threshold: 0.15, rootMargin: "0px 0px -50px 0px" };
+
+        const appearOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, appearOptions);
+
+        faders.forEach(fader => {
+            fader.style.opacity = '0';
+            fader.style.transform = 'translateY(30px)';
+            fader.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
+            appearOnScroll.observe(fader);
+        });
+
+        setTimeout(() => { window.dispatchEvent(new Event('scroll')); }, 100);
+    </script>
+</body>
+</html>

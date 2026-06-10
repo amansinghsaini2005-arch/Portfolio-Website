@@ -122,7 +122,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .deco-ring{position:absolute;width:140px;height:140px;border:2px solid var(--accent);border-radius:50%;top:-25px;right:-25px;opacity:.15;animation:spin 25s linear infinite}
 .deco-dots{position:absolute;bottom:-15px;left:-15px;width:80px;height:80px;background-image:radial-gradient(circle,var(--accent2) 1px,transparent 1px);background-size:12px 12px;opacity:.2}
 @keyframes spin{to{transform:rotate(360deg)}}
-.about-text p{color:var(--text2);font-size:1.02rem;margin-bottom:2.5rem;line-height:1.9}
+.about-text p{color:var(--text2);font-size:1.1rem;margin-bottom:2.5rem;line-height:1.9}
 .info-grid{display:grid;grid-template-columns:1fr 1fr;gap:.8rem;margin-bottom:2.5rem}
 .info-item{padding:1rem 1.2rem;background:var(--glass);border:1px solid var(--glass-border);border-radius:14px;transition:all .3s var(--ease)}
 .info-item:hover{border-color:var(--accent);transform:translateX(6px);background:var(--glass-hover)}
@@ -137,10 +137,12 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .skill-card-3d:hover{transform:translateY(-12px) rotateX(2deg);border-color:rgba(59,130,246,.25);box-shadow:var(--glow),0 20px 40px rgba(0,0,0,.3)}
 .skill-card-3d:hover::before{transform:scaleX(1)}
 .skill-card-3d:hover::after{opacity:1}
-.skill-icon{font-size:2.5rem;margin-bottom:1.2rem;display:block;transition:transform .5s var(--ease2)}
+.skill-icon{margin-bottom:1.2rem;display:block;transition:transform .5s var(--ease2)}
+.skill-icon .skill-img {width: 60px; height: 60px; object-fit: contain; filter: drop-shadow(0 4px 10px rgba(0, 243, 255, 0.2)); transition: all 0.4s ease;}
 .skill-card-3d:hover .skill-icon{transform:scale(1.15) translateY(-4px)}
+.skill-card-3d:hover .skill-img{filter: drop-shadow(0 8px 15px rgba(0, 243, 255, 0.4));}
 .skill-card-3d h3{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;margin-bottom:.5rem}
-.skill-card-3d p{color:var(--text2);font-size:.85rem;margin-bottom:1.2rem;line-height:1.6}
+.skill-card-3d p{color:var(--text2);font-size:1.05rem;margin-bottom:1.2rem;line-height:1.6}
 .skill-bar{width:100%;height:4px;background:rgba(255,255,255,.04);border-radius:4px;overflow:hidden}
 .skill-bar-fill{height:100%;background:var(--grad);border-radius:4px;width:0;transition:width 1.8s var(--ease);box-shadow:0 0 12px rgba(59,130,246,.3)}
 .skill-percent{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);text-align:right;margin-top:.4rem}
@@ -159,9 +161,9 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .timeline-item::before{content:'';position:absolute;left:-2.5rem;top:2rem;width:10px;height:10px;background:var(--accent);border-radius:50%;transform:translateX(-4px);box-shadow:0 0 20px rgba(124,58,237,.6)}
 .timeline-date{font-family:'JetBrains Mono',monospace;font-size:.75rem;color:var(--accent);margin-bottom:.5rem;letter-spacing:1px}
 .timeline-item h3{font-family:'Space Grotesk',sans-serif;font-size:1.15rem;margin-bottom:.25rem}
-.timeline-item .company{color:var(--accent2);font-size:.9rem;margin-bottom:1rem;font-weight:500}
+.timeline-item .company{color:var(--accent2);font-size:1.05rem;margin-bottom:1rem;font-weight:500}
 .timeline-item ul{list-style:none;padding:0}
-.timeline-item ul li{color:var(--text2);font-size:.85rem;padding:.25rem 0 .25rem 1.2rem;position:relative;line-height:1.7}
+.timeline-item ul li{color:var(--text2);font-size:1.05rem;padding:.25rem 0 .25rem 1.2rem;position:relative;line-height:1.7}
 .timeline-item ul li::before{content:'▹';position:absolute;left:0;color:var(--accent)}
 
 /* Education */
@@ -170,7 +172,7 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .edu-year{font-family:'JetBrains Mono',monospace;color:var(--accent2);font-size:.8rem;margin-bottom:.5rem;letter-spacing:1px}
 .edu-card h3{font-family:'Space Grotesk',sans-serif;font-size:1.1rem;margin-bottom:.2rem}
 .edu-school{color:var(--accent);font-size:.9rem;margin-bottom:.6rem;font-weight:500}
-.edu-card p{color:var(--text2);font-size:.85rem;line-height:1.7}
+.edu-card p{color:var(--text2);font-size:1.05rem;line-height:1.7}
 
 /* ---- Projects ---- */
 .projects-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(350px,1fr));gap:2rem;perspective:1200px}
@@ -202,10 +204,10 @@ body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);overf
 .contact-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:var(--grad);transform:scaleX(0);transition:transform .5s var(--ease2)}
 .contact-card:hover{transform:translateY(-10px) scale(1.02);border-color:rgba(59,130,246,.2);box-shadow:0 20px 40px rgba(0,0,0,.3)}
 .contact-card:hover::after{transform:scaleX(1)}
-.contact-icon{font-size:1.8rem;margin-bottom:1rem;transition:transform .5s var(--ease2)}
+.contact-icon{font-size:2rem;margin-bottom:1rem;transition:transform .5s var(--ease2)}
 .contact-card:hover .contact-icon{transform:scale(1.2) translateY(-3px)}
-.contact-card h4{font-family:'Space Grotesk',sans-serif;margin-bottom:.5rem;font-size:.95rem}
-.contact-card a,.contact-card p{color:var(--text2);text-decoration:none;font-size:.85rem;transition:.3s;word-break:break-all}
+.contact-card h4{font-family:'Space Grotesk',sans-serif;margin-bottom:.5rem;font-size:1.2rem}
+.contact-card a,.contact-card p{color:var(--text2);text-decoration:none;font-size:1.05rem;transition:.3s;word-break:break-all}
 .contact-card a:hover{color:var(--accent2)}
 
 .social-links{display:flex;justify-content:center;gap:1rem;margin-top:2.5rem}
